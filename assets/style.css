@@ -1,0 +1,259 @@
+body {
+    padding-top: 80px; /* Added more padding to account for fixed nav */
+    font-family: 'Helvetica Neue';
+    background-color: #f2f2f2;
+}
+
+nav {
+    background-color: rgba(0, 0, 0, 0.344);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+
+nav img {
+    height: 85%;
+}
+
+h3 {
+    text-align: center; 
+    color: #7700ff;
+    font-family: 'Helvetica Neue', sans-serif; 
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20rem;
+}
+
+.container2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    width: 100%; 
+    height: 100vh; 
+    position: absolute; 
+    top: 0;
+    left: 0;
+}
+
+.container2 > button {
+    width: 50%;
+    height: 60px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#alcohol {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    list-style-type: none;
+    padding: 0;
+    width: 80%;
+    margin: 0 auto;
+}
+#drinkCategory {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    list-style-type: none;
+    padding: 0;
+    width: 80%;
+    margin: 0 auto;
+}
+button {
+    background-image: linear-gradient(45deg, #E5E7EB, #D1D5DB);
+    color: #1F2937;
+    padding: 1rem 2.5rem;
+    font-weight: 600;
+    text-align: center;
+    border-radius: 99px;
+    transition: background-color 0.3s, color 0.3s;
+    width: 75%;
+    height: 60px;
+    box-sizing: border-box;
+}
+
+button:hover {
+    background-image: linear-gradient(45deg, #000000, #7700ff);
+    color: white;
+}
+
+button:active {
+    background-image: linear-gradient(45deg, #C7CED9, #EFEFEF);
+}
+
+.big-button {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    width: 50%;
+    margin: 2rem auto;
+}
+
+.big-button > button {
+    font-size: 1.5rem;
+    padding: 1rem 2.5rem;
+    background-image: linear-gradient(45deg, #E5E7EB, #D1D5DB);
+    color: #1F2937;
+    border-radius: 99px;
+    transition: background-color 0.3s, color 0.3s;
+    box-sizing: border-box;
+    text-align: center;
+    font-weight: 600;
+    width: 80%;
+    line-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.big-button > button:hover {
+    background-image: linear-gradient(45deg, #000000, #7700ff);
+    color: white;
+}
+
+.big-button > button:active {
+    background-image: linear-gradient(45deg, #C7CED9, #EFEFEF);
+}
+
+/* Media Queries for responsive text and button resizing */
+
+@media (min-width: 1201px) {
+    h3 {
+        font-size: 40px;
+    }
+
+    button {
+        font-size: 1.25rem;
+    }
+
+    .big-button > button {
+        font-size: 1.5rem;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+    h3 {
+        font-size: 32px;
+    }
+
+    button {
+        font-size: 1.1rem;
+    }
+
+    .big-button > button {
+        font-size: 1.3rem;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    h3 {
+        font-size: 28px;
+    }
+
+    button {
+        font-size: 1rem;
+        padding: 0.75rem 2rem; /* Adjust button padding for better text fit */
+    }
+
+    .big-button > button {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    h3 {
+        font-size: 24px;
+    }
+
+    button {
+        font-size: 0.9rem;
+        padding: 0.5rem 1.5rem; /* Adjust button padding for better text fit */
+    }
+
+    .big-button > button {
+        font-size: 1rem;
+    }
+}
+
+.favorite-button{
+  background-color: gold;
+  height: 5%;
+  border-radius: 50%;
+  width: 5%;
+}
+
+li{
+    color: white;
+}
+
+h2{
+    color: white;
+}
+
+nav{
+    flex-direction: column;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+
+.logo{
+    text-align: center;
+
+}
+
+.favorites-button{
+    margin-left: auto;
+    width: 10%;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.7);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+}
+
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #000;
+}

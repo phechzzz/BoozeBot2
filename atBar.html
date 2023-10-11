@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link rel="stylesheet" href="assets/style.css">
+  <title>BoozeBot</title>
+</head>
+<body>
+  <nav>
+    <img src="assets/boozebot logo.png" alt="Boozebot logo">
+    <button class="favorites-button" id="favorite-drinks">Favorites</button>
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+          <span class="close" id="closeModalBtn">&times;</span>
+          <h2>Modal Title</h2>
+          <p id="modla-text"></p>
+          <ul id="favorites-list"></ul>
+      </div>
+  </div>
+  </nav>
+  <h2>Choose a drink category</h2>
+  <body style="background-image: url('assets/at bar .png');"> 
+  <div>
+    <ul id="drinkCategory" class="container">
+    
+    <li><button id='button1'>Vodka</button></li>
+    <li><button id='button2'>Whiskey</button></li>
+    <li><button id="button3">Gin</button></li>
+    <li><button id="button4">Tequila</button></li>
+    <li><button id="button5">Rum</button></li>
+    <li><button id="button6">Brandy</button></li>
+    <li><button id="button7">Vermouth</button></li>
+    <li><button id="button8">Cognac</button></li>
+  </ul>
+  </div>
+  <aside>
+    <ul id="display-drink">
+      
+    </ul>
+    
+  </aside>
+
+  <script src="assets/atBar.js"></script>
+</body>
